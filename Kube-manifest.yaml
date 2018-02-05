@@ -1,0 +1,12 @@
+apiVersion: manifest.k8s.io/v1alpha1
+kind: Manifest
+metadata:
+  name: mysql
+description: MySQL Deployment using persistent-volume.
+resources:
+- deployment.yaml
+- service.yaml
+- pvc.yaml
+genericSecrets:
+- name: mysql-pass
+  literals: [password=admin]
