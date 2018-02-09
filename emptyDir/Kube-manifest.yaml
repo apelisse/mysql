@@ -8,6 +8,4 @@ description: MySQL Deployment using empty dir.
 resources:
 - deployment.yaml
 - service.yaml
-genericSecrets:
-- name: mysql-pass
-  literals: [password=admin]
+- secret.yaml
